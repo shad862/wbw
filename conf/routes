@@ -1,14 +1,18 @@
-GET     /                           controllers.Application.index
+GET         /                          controllers.Application.index
 
-GET     /products                   controllers.Products.list
-GET     /products/new               controllers.Products.newProduct
-POST    /products                   controllers.Products.save
-GET     /products/:ean              controllers.Products.show(ean: Long)
-POST    /products/:ean              controllers.Products.update(ean: Long)
-PUT     /products/:ean              controllers.Products.update(ean: Long)
-GET     /products/:ean/edit         controllers.Products.edit(ean: Long)
+GET         /products                  controllers.Products.list
+GET         /products/new              controllers.Products.newProduct
+POST        /products                  controllers.Products.save
+GET         /products/:ean             controllers.Products.show(ean: Long)
+POST        /products/:ean             controllers.Products.update(ean: Long)
+PUT         /products/:ean             controllers.Products.update(ean: Long)
+GET         /products/:ean/edit        controllers.Products.edit(ean: Long)
 
-GET     /barcode/:ean               controllers.Barcodes.barcode(ean: Long)
+GET         /barcode/:ean              controllers.Barcodes.barcode(ean: Long)
+
+GET         /words                     controllers.Words.list
+GET         /words/:content            controllers.Words.show(content: String)
+GET         /words/new                 controllers.Words.newWord
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET         /assets/*file              controllers.Assets.at(path="/public", file)

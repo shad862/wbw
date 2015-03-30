@@ -82,12 +82,12 @@ object Products extends Controller {
    * Displays a blank form for adding a new product.
    */
   def newProduct = Action { implicit request =>
-    val form = if (request.flash.get("error").isDefined) {
-      val errorForm = productForm.bind(request.flash.data)
-
+    val form =
+      if (request.flash.get("error").isDefined) {
+        val errorForm = productForm.bind(request.flash.data)
         errorForm
-    } else
-      productForm
+      } else
+        productForm
 
     Ok(views.html.products.editProduct(form))
   }

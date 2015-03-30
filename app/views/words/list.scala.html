@@ -1,0 +1,14 @@
+@(words: List[Word])(implicit flash: Flash, requestHeader: RequestHeader, lang: Lang)
+
+@main(Messages("words.list")){
+
+    <dl class="word-item">
+    @for(word <- words){
+        <dt>
+            <a href="@controllers.routes.Words.show(word.content)">@word.content</a></dt>
+        <dd>@word.meaning</dd>
+
+    }
+    </dl>
+    <p><a href="@controllers.routes.Words.newWord()" class="btn"><i class="glyphicon-plus"></i></a></p>
+}
