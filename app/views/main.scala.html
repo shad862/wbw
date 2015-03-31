@@ -10,6 +10,8 @@
         <meta name="author" content="shad862">
         <title>@title</title>
         <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/sticky-footer.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <!-- Custom CSS -->
         <style>body { padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */ }</style>
@@ -60,13 +62,12 @@
                         <div class="alert alert-error">@flash.get("error")</div>
                     }
                     @content
-                    @debug()
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
-
+        @debug()
         <!-- Bootstrap core JavaScript
          ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

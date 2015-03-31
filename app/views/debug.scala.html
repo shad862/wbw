@@ -1,9 +1,11 @@
 @()(implicit lang: Lang)
-@*
-Displays debug information for the page footer.
-*@
-
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted left small">
 @import play.api.Play.current
-    debug: user=@current.configuration.getString("environment.user"),
-    lang=@lang.code,
-    date=@(new java.util.Date().format("yyyy-MM-dd"))
+debug info: user=@current.configuration.getString("environment.user"),lang=@lang.code,date=@(new java.util.Date().format("yyyy-MM-dd"))
+        </p>
+    </div>
+</footer>
+
+

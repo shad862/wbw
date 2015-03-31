@@ -1,12 +1,26 @@
 application.name=Word By Word
+
 ean=EAN
 name=Name
+
 description=Description
+
 products.details=Product\: {0}
 products.form = Detalles del producto
 products.new = (nuevo)
 products.new.command = Añadir
 products.new.submit = Añadir
 products.new.success = Producto {0} añadido.
+
 validation.errors = Corrija los errores en el formulario.
 validation.ean.duplicate = Ya existe un producto con este EAN
+
+words.details=Word {0}
+words.form=Setting
+
+word.content=Word
+word.meaning=Meaning
+word.id=Id
+
+words.list.navigation=List
+words.new.command=Add

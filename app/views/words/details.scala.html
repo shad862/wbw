@@ -1,11 +1,13 @@
 @(word: Word)(implicit flash: Flash, lang: Lang)
 @main(Messages("words.details", word.content)){
-    <h3>@word.id</h3>
-    <dl class="dl-horizontal">
-        <dt>@Messages("word.content")</dt>
-        <dd>@word.content</dd>
-
-        <dt>@Messages("word.meaning")</dt>
-        <dd>@word.meaning</dd>
-    </dl>
+    <div class="jumbotron">
+        <dl class="dl-horizontal">
+            <dt>@Messages("word.id")</dt>
+            <dd>@word.id</dd>
+            <dt>@Messages("word.content")</dt>
+            <dd>@word.content</dd>
+            <dt>@Messages("word.meaning")</dt>
+            <dd>@word.meaning</dd>
+        </dl>
+    </div>
 }

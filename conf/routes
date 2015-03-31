@@ -13,6 +13,9 @@ GET         /barcode/:ean              controllers.Barcodes.barcode(ean: Long)
 GET         /words                     controllers.Words.list
 GET         /words/:content            controllers.Words.show(content: String)
 GET         /words/new                 controllers.Words.newWord
+POST        /words                     controllers.Words.save
+POST        /words/:id                 controllers.Words.update(id: Long)
+PUT         /words/:id                 controllers.Words.update(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file              controllers.Assets.at(path="/public", file)

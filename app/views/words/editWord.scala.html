@@ -1,0 +1,23 @@
+@(wordForm: Form[Word], id: Option[Long] = None)(implicit flash: Flash, lang: Lang)
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("products.form")) {
+    <h2>@Messages("products.form")</h2>
+
+    @helper.form(action = id.map(routes.Words.update(_)).getOrElse(routes.Words.save())) {
+        <fieldset>
+            <legend>
+                @Messages("products.details", wordForm("content").value.getOrElse(Messages("word.new")))
+            </legend>
+                @helper.inputText(wordForm("id"))
+                @helper.inputText(wordForm("content"))
+                @helper.inputText(wordForm("language"))
+                @helper.textarea(wordForm("meaning"))
+        </fieldset>
+        <p><input type="submit" class="btn primary" value='@id.map(_=> Messages("words.edit.submit")).getOrElse(Messages("words.new.submit"))'></p>
+    }
+}
+
+
+
