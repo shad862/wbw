@@ -3,7 +3,8 @@
     <div class="container">
         <p class="text-muted left small">
 @import play.api.Play.current
-debug info: user=@current.configuration.getString("environment.user"),lang=@lang.code,date=@(new java.util.Date().format("yyyy-MM-dd"))
+debug info: lang=@lang.code,date=@(new java.util.Date().format("yyyy-MM-dd"))
+            @*user=@current.configuration.getString("environment.user")*@
         </p>
     </div>
 </footer>
