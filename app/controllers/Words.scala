@@ -20,8 +20,9 @@ object Words extends Controller{
     }.getOrElse(NotFound)
   }
 
-  def newWord = Action { implicit  request =>
+  def newWord() = Action { implicit  request =>
     val form = wordForm
+    wordForm.bind(Map("id"-> Word.findAll.size.toString))
     Ok(views.html.words.editWord(form))
   }
 
@@ -32,9 +33,9 @@ object Words extends Controller{
   private def makeWordForm() = Form(
     mapping(
       "id" -> longNumber,
-      "content" -> text.verifying("", isWordSet _),
+      "content" -> nonEmptyText,
       "language" -> nonEmptyText(2,2),
-      "meaning" -> nonEmptyText
+      "meaning" -> nonEmptyText(1,255)
     )(Word.apply)(Word.unapply)
   )
 

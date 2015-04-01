@@ -2,13 +2,13 @@
 @import helper._
 @import helper.twitterBootstrap._
 
-@main(Messages("products.form")) {
-    <h2>@Messages("products.form")</h2>
+@main(Messages("words.form")) {
+    <h2>@Messages("words.form")</h2>
 
     @helper.form(action = id.map(routes.Words.update(_)).getOrElse(routes.Words.save())) {
         <fieldset>
             <legend>
-                @Messages("products.details", wordForm("content").value.getOrElse(Messages("word.new")))
+                @Messages("words.details", wordForm("content").value.getOrElse(Messages("words.new")))
             </legend>
                 @helper.inputText(wordForm("id"))
                 @helper.inputText(wordForm("content"))

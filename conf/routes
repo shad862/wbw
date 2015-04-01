@@ -11,9 +11,9 @@ GET         /products/:ean/edit        controllers.Products.edit(ean: Long)
 GET         /barcode/:ean              controllers.Barcodes.barcode(ean: Long)
 
 GET         /words                     controllers.Words.list
-GET         /words/:content            controllers.Words.show(content: String)
-GET         /words/new                 controllers.Words.newWord
 POST        /words                     controllers.Words.save
+GET         /words/new                 controllers.Words.newWord
+GET         /words/:content            controllers.Words.show(content: String)
 POST        /words/:id                 controllers.Words.update(id: Long)
 PUT         /words/:id                 controllers.Words.update(id: Long)
 

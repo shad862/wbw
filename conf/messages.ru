@@ -17,6 +17,9 @@ validation.ean.duplicate = Дубликат EAN
 
 words.details=Слово {0}
 words.form=Настройки слова
+words.new=новое
+words.edit.submit=Сохранить
+words.new.submit=Создать
 
 word.content=Слово
 word.meaning=Толкование
@@ -24,3 +27,4 @@ word.id=Идентификатор
 
 words.list.navigation=Список
 words.new.command=Добавить
+
