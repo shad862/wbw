@@ -3,7 +3,8 @@ package controllers
 import models.Word
 import play.api.data.Form
 import play.api.data.Forms._
-import play.api.mvc.{Action, Controller}
+import play.api.i18n.Messages
+import play.api.mvc.{Flash, Action, Controller}
 
 /**
  * @author shad862
@@ -42,10 +43,21 @@ object Words extends Controller{
   private val wordForm = makeWordForm()
 
   def save = Action { implicit request =>
-    Ok("Not implemented yet")
+    val newWordForm = wordForm.bindFromRequest()
+    newWordForm.fold(
+      hasErrors = {form =>
+        Redirect(routes.Words.newWord()).flashing(Flash(form.data) +
+          ("error" -> Messages("validation.error")))
+      },
+      success = {newWord =>
+        Word.add(newWord)
+        val successMessage = ("success" -> Messages("words.new.success", newWord.content))
+        Redirect(routes.Words.show(newWord.content)).flashing(successMessage)
+      }
+    )
   }
 
   def update(id: Long) = Action { implicit request =>
-    Ok("Not implemented yet")
+    Ok("Update not implemented yet")
   }
 }
