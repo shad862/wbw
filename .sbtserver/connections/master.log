@@ -1,7 +1,22 @@
-New log file opened at Thu Apr 02 00:27:43 EAT 2015 by 5740@h
-Taking next connection to: 49331
-New client attempting to connect on port: 49332-49331
-  Address = /192.168.1.10:49331
-This client on port 49332 has uuid 31e5b3a8-f9c1-456c-8da1-2e6ea56c8bb4 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-31e5b3a8-f9c1-456c-8da1-2e6ea56c8bb4
-Taking next connection to: 49331
+New log file opened at Thu Apr 02 09:27:03 MSK 2015 by 26162@dev-shabalin
+Taking next connection to: 34218
+New client attempting to connect on port: 57718-34218
+  Address = /127.0.0.1:34218
+This client on port 57718 has uuid 78d3cd82-5a53-4a4b-bd1c-25363fff8bea configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-78d3cd82-5a53-4a4b-bd1c-25363fff8bea
+Taking next connection to: 34218
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 34218
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 34218
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 34218
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 26162@dev-shabalin logs at Thu Apr 02 09:39:03 MSK 2015, goodbye.
